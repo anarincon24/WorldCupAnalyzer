@@ -29,7 +29,8 @@ Next, we need to download and load the datasets that we will be using in our cod
 
 The datasets in CSV form can be downloaded from the project github instead of going through Kaggle.
 
-We will load these into our code using pandas, convert the date column into something that python can interpret, and shorten our 'rankings' data to only the columns we need.
+We will load these into our code using pandas, and shorten our 'rankings' data to only the columns we need.
+We also need to convert the 'date' column into something that our Python script can interpret. Python currently thinks "2006-05-17" is just a string. After conversion it becomes a true date object that Python can compare.
 
 ```
 rankings = pd.read_csv("fifa_mens_rank.csv")
@@ -39,6 +40,7 @@ rankings["date"] = pd.to_datetime(rankings["date"])
 
 rankings = rankings[["date", "team", "rank"]]
 ```
+
 ## Step 2: Focus on the FIFA Ranking Era
 
 The FIFA World Ranking system was introduced in 1992.
@@ -253,7 +255,7 @@ A value closer to 0 suggests rankings have little predictive power.
 
 ## Step 8: Visualize Ranking vs Performance
 
-Let's compare rankings and outcomes directly.
+Let's compare rankings and outcomes directly with an interactive scatter plot!
 ```
 fig = px.scatter(
     dataset,
@@ -269,7 +271,10 @@ fig.update_yaxes(autorange="reversed")
 
 fig.show()
 ```
-Try hovering over points to investigate specific teams!
+Try hovering over points after you run the code to investigate specific teams!
+<img width="625" height="450" alt="image" src="https://github.com/user-attachments/assets/a79db23b-7904-407e-96f3-7218f740684a" />
+
+
 ## Step 9: When FIFA Got It Wrong
 
 Even good prediction systems make mistakes.
@@ -292,6 +297,8 @@ sns.barplot(
     y="Team_Year"
 )
 ```
+<img width="757" height="522" alt="image" src="https://github.com/user-attachments/assets/fb4bcadb-8d97-4ae7-8d4b-b1493b5d7146" />
+
 These teams represent some of the biggest surprises in World Cup history when you compare final tournament placements to Fifa rankings before their respective World Cup.
 
 ## Step 10: Have Rankings Improved?
@@ -332,6 +339,8 @@ plt.title(
 
 plt.show()
 ```
+<img width="760" height="488" alt="image" src="https://github.com/user-attachments/assets/c14ec1ea-a4c1-4500-9c7c-59a97e4a7519" />
+
 If the line trends upward, FIFA rankings may be getting better at predicting success.
 
 ## Final Verdict
