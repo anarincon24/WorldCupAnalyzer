@@ -272,8 +272,7 @@ fig.update_yaxes(autorange="reversed")
 fig.show()
 ```
 Try hovering over points after you run the code to investigate specific teams!
-<img width="625" height="450" alt="image" src="https://github.com/user-attachments/assets/a79db23b-7904-407e-96f3-7218f740684a" />
-
+<img width="787" height="560" alt="Screenshot 2026-07-01 001952" src="https://github.com/user-attachments/assets/da0d41f4-c594-42a6-a17d-02cafd9d960d" />
 
 ## Step 9: When FIFA Got It Wrong
 
@@ -297,7 +296,7 @@ sns.barplot(
     y="Team_Year"
 )
 ```
-<img width="757" height="522" alt="image" src="https://github.com/user-attachments/assets/fb4bcadb-8d97-4ae7-8d4b-b1493b5d7146" />
+<img width="757" height="522" alt="Screenshot 2026-07-01 001036" src="https://github.com/user-attachments/assets/9cd7cf45-fc4d-4fe1-9ada-11c4fea8def2" />
 
 These teams represent some of the biggest surprises in World Cup history when you compare final tournament placements to Fifa rankings before their respective World Cup.
 
@@ -339,7 +338,7 @@ plt.title(
 
 plt.show()
 ```
-<img width="760" height="488" alt="image" src="https://github.com/user-attachments/assets/c14ec1ea-a4c1-4500-9c7c-59a97e4a7519" />
+<img width="760" height="488" alt="Screenshot 2026-07-01 001059" src="https://github.com/user-attachments/assets/b48b6ea1-8643-4ebb-8740-17be81d37c4b" />
 
 If the line trends upward, FIFA rankings may be getting better at predicting success.
 
